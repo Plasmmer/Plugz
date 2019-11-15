@@ -1,0 +1,5 @@
+- install.sh, install jq from HTTP IPFS
+
+- Tell which and how binaries need to be placed (uses dedup)
+- File with target platforms and their variations
+- plugzlr dist <platform>
