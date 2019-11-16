@@ -16,7 +16,7 @@ mkdir include/jq
 if [ "$(uname -m)" = "i386" ] || [ "$(uname -m)" = "i686" ]; then
    wget https://siderus.io/ipfs/$jq_linux_i386_ipfs -O ./include/jq/jq-linux32.tar.gz
    echo "Checking for package integrity..."
-   if [ "$(ipfs add -q ./include/jq/jq-linux32.tar.gz)" = "$jq_linux_i386_ipfs" ]
+   if [ "$(ipfs add -q --only-hash ./include/jq/jq-linux32.tar.gz)" = "$jq_linux_i386_ipfs" ]
       then
          echo "CID/Hash is the same from requested and the downloaded file, so the download is ok."
          tar -xzf include/jq/jq-linux32.tar.gz
@@ -27,7 +27,7 @@ fi
 if [ "$(uname -m)" = "amd64" ]; then
    wget https://siderus.io/ipfs/$jq_linux_amd64_ipfs -O ./include/jq/jq-linux64.tar.gz
    echo "Checking for package integrity..."
-   if [ "$(ipfs add -q ./include/jq/jq-linux64.tar.gz)" = "$jq_linux_amd64_ipfs" ]
+   if [ "$(ipfs add -q --only-hash ./include/jq/jq-linux64.tar.gz)" = "$jq_linux_amd64_ipfs" ]
       then
          echo "CID/Hash is the same from requested and the downloaded file, so the download is ok."
          tar -xzf include/jq/jq-linux64.tar.gz
