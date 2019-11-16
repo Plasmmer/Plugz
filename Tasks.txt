@@ -1,3 +1,4 @@
+- Install IPFS before jq
 - Detect if local IPFS is running, then use it instead of HTTP (only if package gets corrupt)
 
 - Tell which and how binaries need to be placed (uses dedup)
