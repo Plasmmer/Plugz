@@ -1,4 +1,4 @@
-- install.sh, install jq from HTTP IPFS
+- Detect if local IPFS is running, then use it instead of HTTP (only if package gets corrupt)
 
 - Tell which and how binaries need to be placed (uses dedup)
 - File with target platforms and their variations
