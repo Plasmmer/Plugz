@@ -1,4 +1,4 @@
-# Plugzlr
+# Plugz
 
 Get build recipes from JSON files, parse source-code and binary links from both centralized and decentralized sources, do different builds to different targets.
 
@@ -10,7 +10,7 @@ Get build recipes from JSON files, parse source-code and binary links from both 
 
 # Installing
 
-Open terminal on Plugzlr folder, and type following by pressing `[ENTER]`:
+Open terminal on Plugz folder, and type following by pressing `[ENTER]`:
 
 ```sh
 chmod +x install.sh && sh ./install.sh

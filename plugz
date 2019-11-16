@@ -1,6 +1,6 @@
 #!/bin/sh
 
-nm="Plugzlr"
+nm="Plugz"
 vs="r1"
 plugzlrversion="""
         \e[1;42m $nm \e[0m\e[100m version $vs \e[0m
@@ -9,14 +9,14 @@ plugzlrversion="""
 """
 
 if [ "$1" = "" ]; then
-   echo "$plugzlrversion"
-   echo "Type 'plugzlr --help' (without quotes) to see a list of available commands."
+   echo "$plugzversion"
+   echo "Type 'plugz --help' (without quotes) to see a list of available commands."
 fi
 
 # displays help message with a list of commands:
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "        \e[1;42m $nm $vs \e[0m"
-   echo "Use these commands after/together with 'dedup' command."
+   echo "Use these commands after/together with 'plugz' command."
    echo "Available commands:"
    echo "Information:"
    echo "  --help, -h                          Shows all available commands"

@@ -42,6 +42,6 @@ chmod +x /usr/bin/jq
 echo "Testing if jq works:"
 jq
 
-echo "Installing Plugzlr..."
-sudo cp -f plugzlr /usr/bin && sudo chmod +x /usr/bin/plugzlr
-echo "Done! Run 'plugzlr' command to use it."
+echo "Installing Plugz..."
+sudo cp -f plugz /usr/bin && sudo chmod +x /usr/bin/plugz
+echo "Done! Run 'plugz' command to use it."
