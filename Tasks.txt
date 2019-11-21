@@ -1,3 +1,5 @@
+dont tell to install jq if download is corrupt
+
 - Test if jq and IPFS are already installed
 - Install IPFS before jq
 - Detect if local IPFS is running, then use it instead of HTTP (only if package gets corrupt)
