@@ -1,6 +1,13 @@
+install.sh
+plugz dev
+plugz build
+plugz dist
+
 dont tell to install jq if download is corrupt
 
-- Test if jq and IPFS are already installed
+USECASE-FLOFLIS-DNA: different build types: lite, normal, core(and others)
+USECASE-FLOFLIS-CORE: dl jq when creating build, but save it in a builds folder
+
 - Install IPFS before jq
 - Detect if local IPFS is running, then use it instead of HTTP (only if package gets corrupt)
 
