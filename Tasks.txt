@@ -1,7 +1,10 @@
+- table of decompression methods for file extensions
+- site: tell there is recipe.json and recipe.sh. Only usecase for recipe.sh is downloading jq to read json
+
 install.sh
-plugz dev
-plugz build
-plugz dist
+plugz dev (?)
+plugz build (?)
+plugz dist (packaging)
 
 dont tell to install jq if download is corrupt
 

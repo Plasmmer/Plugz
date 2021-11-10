@@ -13,10 +13,10 @@ echo "Installing dependency: jq..."
 mkdir include
 mkdir include/jq
 # download using recipe.sh
-if [ "$(uname -m)" = "i386" ] || [ "$(uname -m)" = "i686" ]; then
+if [ "$(uname -m)" = "i386" ] || [ "$(uname -m)" = "i686" ] || [ "$(uname -m)" = "x86_32" ]; then
    wget https://ipfs.io/ipfs/$jq_linux_i386_ipfs -O ./include/jq/jq-linux32.tar.gz
    echo "Checking for package integrity..."
-   if [ "$(ipfs add -q --only-hash ./include/jq/jq-linux32.tar.gz)" = "$jq_linux_i386_ipfs" ]
+   if [ "$(ipfs add -q --only-hash ./include/jq/jq-linux32.tar.gz | ipfs cid base32)" = "$jq_linux_i386_ipfs" ]
       then
          echo "CID/Hash is the same from requested and the downloaded file, so the download is ok."
          tar -xzf include/jq/jq-linux32.tar.gz
@@ -24,10 +24,10 @@ if [ "$(uname -m)" = "i386" ] || [ "$(uname -m)" = "i686" ]; then
          echo "Requested CID/Hash $jq_linux_i386_ipfs is different from the result: $(ipfs add -q ./include/jq/jq-linux32.tar.gz). Your download is corrupt. Please try again."
 fi
 fi
-if [ "$(uname -m)" = "amd64" ]; then
+if [ "$(uname -m)" = "amd64" ] || [ "$(uname -m)" = "x86_64" ]; then
    wget https://ipfs.io/ipfs/$jq_linux_amd64_ipfs -O ./include/jq/jq-linux64.tar.gz
    echo "Checking for package integrity..."
-   if [ "$(ipfs add -q --only-hash ./include/jq/jq-linux64.tar.gz)" = "$jq_linux_amd64_ipfs" ]
+   if [ "$(ipfs add -q --only-hash ./include/jq/jq-linux64.tar.gz | ipfs cid base32)" = "$jq_linux_amd64_ipfs" ]
       then
          echo "CID/Hash is the same from requested and the downloaded file, so the download is ok."
          tar -xzf include/jq/jq-linux64.tar.gz
