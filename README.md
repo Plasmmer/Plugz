@@ -6,7 +6,7 @@ Get build recipes from JSON files, parse source-code and binary links from both 
 
 * .sh script
 * jq - CLI json parser
-* gitty (optional, for decentralized sources)
+* 01 (optional, for decentralized sources)
 
 # Installing
 
