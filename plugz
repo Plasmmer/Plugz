@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 nm="Plugz"
 vs="r1"
