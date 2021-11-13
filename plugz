@@ -8,6 +8,20 @@ plugzlrversion="""
         \e[100m Projected early this year. but created in 11-15-2019 by Daniell Mesquita \e[0m
 """
 
+if [ ! -f /usr/lib/plugz/projects.json ]; then
+    echo ""
+    echo "It looks like its your first time using $nm"
+    echo ""
+    echo "Initializing..."
+    cat > /usr/lib/plugz/projects.json <<EOF
+{
+	"projects": [{}]
+}
+EOF
+echo "Done!"
+fi
+fi
+
 if [ "$1" = "" ]; then
    echo "$plugzversion"
    echo "Type 'plugz --help' (without quotes) to see a list of available commands."
@@ -25,4 +39,20 @@ fi
 
 if [ "$1" = "--version" ] || [ "$1" = "-v" ]; then
    echo "$vs"
+fi
+
+function recipe_not_empty {
+   echo "Tell the name/ID your project will have. Don't use spaces nor special characters. Sample valid name: web3updater"
+   echo -n "Write bellow your project's name: "
+   read projnameid
+}
+
+if [ "$1" = "init" ]; then
+   if [ -s recipe.json ]
+      then
+         echo "Lets turn your project Plugz-ready!"
+         recipe_not_empty
+      else
+         echo "recipe.json is empty! Please fill it properly before initiating. Documentation, soon"
+fi
 fi
